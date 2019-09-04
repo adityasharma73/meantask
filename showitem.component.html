@@ -1,0 +1,29 @@
+<style type="text/css">
+	table th
+{
+	text-align: center;
+}
+</style>
+<table class="table table-bordered">
+	<tr>
+		<th>Sr.No</th>
+		<th>Todo title</th>
+		<th>Description about the item</th>
+		<th>Time of the event</th>
+		<th>Delete</th>
+		<th>Update</th>
+	</tr>
+	<tr *ngFor="let emp of mydata;let index=index" >
+		<td>{{index+1}}</td>
+		<td>{{emp.title}}</td>
+		<td>{{emp.description}}</td>
+		<td>{{emp.time}}</td>
+		<td>
+
+<input type="button" class="btn btn-danger" (click) = "removeUser(emp.id)" value="Delete">
+</td>
+	<td>
+<!-- <input type="button" class="btn btn-success" routerLink= "[' /update ', emp.id ]" value="Update"> -->
+<button class="btn btn-success" [routerLink] = "['/update' , emp.id ]">Update</button></td>
+	</tr>
+</table>
