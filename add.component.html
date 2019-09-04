@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome To Addition Page</title>
+</head>
+<body>
+
+	<div class="row">
+	<div class="col-xs-12 col-xm-10 col-md-10 col-md-offset-3 col-md-6 ">
+		<form  [formGroup]="signup"  (ngSubmit)="SaveData()">
+			<h3>Addition Form</h3>
+	<!-- <input type="hidden" id = "id"  formControlName="id"   placeholder="Enter UserId" class="form-control">
+	<br>
+     --><input type="text" id="title"  formControlName="title" [ngClass] = "{ 'is-invalid' : submitted && f.name.errors}" placeholder="Enter Todo title" class="form-control">
+    <br>
+    <input type="text"  id= "description" formControlName="description" placeholder="Enter Description about the item" class="form-control">
+    <br>
+    <input type="text" id="time" formControlName="time" placeholder="Enter Time of the event" class="form-control">
+    <br>
+    <input type="submit" class="btn btn-primary" value="Save" >
+</form>
+</div>
+</div>  
+</body>
+</html>
